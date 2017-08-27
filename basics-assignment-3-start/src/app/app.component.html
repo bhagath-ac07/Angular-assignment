@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="generatePassword()">Display Details</button>
+      <h5 *ngIf="toggle; else secondPara">Secret Password = {{password}}</h5>
+      <ng-template #secondPara>
+        <h5>Secret Password = {{password}}</h5>
+      </ng-template>
+      <p *ngFor="let pass of passwordArray" [ngStyle]="{backgroundColor:getColor(pass)}" [ngClass]="{white: passwordArray.indexOf(pass)>4}">secret key is{{pass}}</p>
+      <table>
+        <tr>
+          <th>Password</th>
+          <th>Count</th>
+        </tr>
+        <tr *ngFor="let pass of passwordArray">
+          <td>{{passwordArray.indexOf(pass)+1}}</td>
+          <td [ngStyle]="{backgroundColor:getColor(pass)}" [ngClass]="{white: passwordArray.indexOf(pass)>4}">{{pass}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

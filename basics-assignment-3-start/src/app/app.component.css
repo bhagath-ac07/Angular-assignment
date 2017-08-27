@@ -1,0 +1,16 @@
+.white{
+    color:white; 
+}
+
+table, th, td {
+   border: 1px solid black;
+   text-align: center;
+   text-indent: 2px;
+}
+th{
+    background-color: #578888;
+}
+p{
+    text-align: center;
+    border: 1px solid black;
+}
