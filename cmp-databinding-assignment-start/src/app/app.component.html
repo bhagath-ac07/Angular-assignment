@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Bind it!</h3>
+      <app-gamecontrol (getNumber)="pushNumber($event)"></app-gamecontrol>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container">
+  <div class="col">
+    <div class="col-xs-12">
+      <app-even *ngFor="let evenNum of evenNumbers" [evenNumber]="evenNum" [name]="evenNumbers_str"></app-even>
+      <app-odd *ngFor="let oddNum of oddNumbers" [oddNumber]="oddNum" [name]="OddNumbers_str"></app-odd>
+    </div>
+  </div>
+</div>
